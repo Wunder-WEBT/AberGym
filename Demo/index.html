@@ -1,21 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo</title>
-    <link rel="stylesheet" href="style.css">
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trainingsplanerstellung</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <script
+      defer
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js" defer></script>
-</head>
-<body>
-    <div id="exerciseBox" class="container">
-        <p class="draggable exercise" draggable="true">1</p>
-        <p class="draggable exercise" draggable="true">2</p>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-primary navbar-expand">
+      <a class="navbar-brand float-lg-left" href="#" style="font-size: 16pt">
+        <img
+          src="./assets/hanteln.png"
+          width="30"
+          height="30"
+          class="d-inline-block align-top"
+          alt=""
+        />
+        Abergym
+      </a>
+
+      <ul class="navbar-nav" style="padding-left: 40px; font-size: 13pt">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Übersicht</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#"
+            >Trainingsplanerstellung<span class="sr-only">(current)</span></a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Statistiken</a>
+        </li>
+      </ul>
+
+      <form class="form-inline" style="padding-left: 57%">
+        <button class="btn btn-sm btn-outline-danger" type="button">
+          Abmelden
+        </button>
+      </form>
+    </nav>
+
+    <div class="row">
+      <div class="col">
+        <div class="scrollWrapper">
+          <div id="exerciseBox" class="container">
+            <p class="draggable exercise" draggable="true">1</p>
+            <p class="draggable exercise" draggable="true">2</p>
+          </div>
+        </div>
       </div>
-      <div class="container">
-        <p class="draggable" draggable="true">3</p>
-        <p class="draggable" draggable="true">4</p>
+      <div class="col-7">
+        <div class="scrollWrapper">
+          <div class="sheet page padding-10mm">
+            <img
+            class="unselectable"
+              src="./assets/logo_g.png"
+              alt="lionfit"
+              width="300"
+              style="padding-bottom: 0.9cm; align-self: center; margin: 0"
+            />
+            <p
+              style="
+                display: inline-block;
+                font-style: italic;
+                font-size: smaller;
+                margin-left: 4cm;"
+                class="unselectable"
+            >
+              <strong>Lionfit Hagenberg </strong> <br />
+              <strong>ADRESSE:</strong> Marktplatz 1, 4311 Schwertberg<br />
+              <strong>TEL:</strong> +43726261017<br />
+              <strong>E-MAIL:</strong> schwertberg@lionfit.at
+            </p>
+
+            <h2 style="padding-left: 5mm;" class="unselectable">Trainingsplan</h2>
+            <div style="border-style: solid;
+            border-width: 2px; align-self: center;">
+            <div class="container paperContainer">
+              <p class="draggable" draggable="true">3</p>
+              <p class="draggable" draggable="true">4</p>
+            </div>
+            </div>
+          </div>
+        </div>
       </div>
-</body>
+    </div>
+  </body>
 </html>

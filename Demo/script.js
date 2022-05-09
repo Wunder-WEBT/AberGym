@@ -1,7 +1,7 @@
 let draggables = document.querySelectorAll(".draggable");
 const containers = document.querySelectorAll(".container");
 const eBox = document.getElementById("exerciseBox");
-let nextElem = null;
+let nextElemEBox = null;
 
 document.querySelectorAll(".exercise").forEach((exercise) => {
   exercise.addEventListener("dragend", (e) => {
@@ -17,16 +17,16 @@ document.querySelectorAll(".exercise").forEach((exercise) => {
       });
 
       exercise.replaceWith(tmp);
-      if (nextElem === null) {
+      if (nextElemEBox === null) {
         eBox.appendChild(exercise);
       } else {
-        eBox.insertBefore(exercise, nextElem);
+        eBox.insertBefore(exercise, nextElemEBox);
       }
     }
   });
 
   exercise.addEventListener("dragstart", (e) => {
-    nextElem = exercise.nextElementSibling;
+    nextElemEBox = exercise.nextElementSibling;
   });
 });
 
