@@ -24,6 +24,7 @@ ul {
   grid-area: nav;
   background-color: #333;
   padding: 1rem;
+  padding-top: 0.3rem;
   margin-top: 1rem;
   margin-left: 10px;
   width: auto;
@@ -31,10 +32,12 @@ ul {
 }
 
 .draggable {
-  padding: 1rem;
+  padding: 0.5rem;
   background-color: white;
   border: 1px solid black;
   cursor: move;
+  margin-top: 5mm;
+  border-radius: 10px;
 }
 
 .draggable.dragging {
@@ -71,6 +74,7 @@ ul {
 }
 
 .paperContainer{
+  padding-top: 0;
   height: 25cm;
 }
 
