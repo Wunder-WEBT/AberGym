@@ -76,3 +76,11 @@ function getDragAfterElement(container, y) {
     { offset: Number.NEGATIVE_INFINITY }
   ).element;
 }
+
+document.querySelectorAll(".deleteButton").forEach((button) => {
+    button.addEventListener("click", deleteNode(button.parentElement));
+  });
+
+function deleteNode(node){
+    node.remove();
+}
