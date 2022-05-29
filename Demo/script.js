@@ -77,10 +77,21 @@ function getDragAfterElement(container, y) {
   ).element;
 }
 
-document.querySelectorAll(".deleteButton").forEach((button) => {
-    button.addEventListener("click", deleteNode(button.parentElement));
-  });
+let coll = document.getElementsByClassName("collapsible");
+let ci;
 
-function deleteNode(node){
-    node.remove();
+for (ci = 0; ci < coll.length; ci++) {
+  coll[ci].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
 }
+
+document.querySelectorAll(".deleteButton").forEach((button) => {
+    button.addEventListener("click", button.parentElement.remove());
+  });
