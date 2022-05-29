@@ -3,6 +3,10 @@ body {
   position: fixed;
 }
 
+.navbar-dark{
+  background-color: black;
+}
+
 
 @media print {
   .Overflow{
@@ -208,7 +212,7 @@ button:focus{
 }
 
 input{
-  width: 2cm;
+  width: 1.5cm;
   border: none;
   outline: none;
   border-bottom: 2px solid;
