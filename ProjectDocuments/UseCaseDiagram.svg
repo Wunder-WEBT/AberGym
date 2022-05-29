@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="325px" preserveAspectRatio="none" style="width:662px;height:325px;background:#FFFFFF;" version="1.1" viewBox="0 0 662 325" width="662px" zoomAndPan="magnify"><defs/><g><!--MD5=[6c38719efac2ec1b638bc34acaf91028]
+entity Trainer--><g id="elem_Trainer"><ellipse cx="41" cy="32.5986" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M41,40.5986 L41,67.5986 M28,48.5986 L54,48.5986 M41,67.5986 L28,82.5986 M41,67.5986 L54,82.5986 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="51" x="15.5" y="97.0938">Trainer</text><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="70" x="6" y="20.7969">«Trainer»</text></g><!--MD5=[6f9893c2186844628ccc1ef2d9dbdaed]
+entity Trainee--><g id="elem_Trainee"><ellipse cx="364" cy="32.5986" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M364,40.5986 L364,67.5986 M351,48.5986 L377,48.5986 M364,67.5986 L351,82.5986 M364,67.5986 L377,82.5986 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68" x="330" y="97.0938">Main User</text><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="73" x="327.5" y="20.7969">«Trainee»</text></g><g id="elem_Create new one"><ellipse cx="200.0792" cy="54.1165" fill="#F1F1F1" rx="88.5792" ry="25.3148" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="93" x="147.0191" y="49.4054">«Templates»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="113" x="137.0191" y="65.7023">Create new one</text></g><g id="elem_Use"><ellipse cx="200.9813" cy="185.998" fill="#F1F1F1" rx="113.9813" ry="25.1963" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="83" x="153.0322" y="178.7772">«Together»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="170" x="109.5322" y="195.074">Specified trainings plan</text></g><g id="elem_Train"><ellipse cx="546.0913" cy="54.32" fill="#F1F1F1" rx="110.5913" ry="24.5183" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="49" x="515.2179" y="46.5036">«Own»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="166" x="456.7179" y="62.8005">train with the new plan</text></g><g id="elem_Changes"><ellipse cx="201.1548" cy="295.2499" fill="#F1F1F1" rx="105.6548" ry="24.4481" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="83" x="152.6394" y="289.1451">«Together»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144" x="122.1394" y="305.442">Make some changes</text></g><!--MD5=[75a06e2222c5abba209f13d5b684dd41]
+link Trainer to Create new one--><g id="link_Trainer_Create new one"><path d="M76.0918,54.3018 C86.1213,54.3018 96.1507,54.3018 106.18,54.3018 " fill="none" id="Trainer-to-Create new one" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="111.425,54.3018,102.425,50.3018,106.425,54.3018,102.425,58.3018,111.425,54.3018" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[4477d5f4052d119216e317495d337d94]
+link Trainer to Use--><g id="link_Trainer_Use"><path d="M76.1685,85.8678 C82.0842,90.9018 88.1891,96.0308 94,100.8018 C117.956,120.4728 145.473,142.0528 166.603,158.4138 " fill="none" id="Trainer-to-Use" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="170.741,161.6148,166.0693,152.9444,166.786,158.5557,161.1748,159.2723,170.741,161.6148" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[6ec3e2977fbcad18860753305ea749a8]
+link Trainer to Changes--><g id="link_Trainer_Changes"><path d="M39.7726,101.1238 C41.0132,134.1788 47.2493,178.4888 69,210.8018 C87.1789,237.8084 117.338,257.8487 144.242,271.5171 " fill="none" id="Trainer-to-Changes" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="148.876,273.8254,142.6045,266.2314,144.4008,271.5955,139.0367,273.3917,148.876,273.8254" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[c57a15ed5f3d982c0deb52acca3c41fb]
+link Trainee to Use--><g id="link_Trainee_Use"><path d="M327.42,84.3638 C299.622,106.4488 261.684,136.5898 234.638,158.0768 " fill="none" id="Trainee-to-Use" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="230.394,161.4488,239.9288,158.9814,234.3086,158.3382,234.9519,152.718,230.394,161.4488" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[1c39fefd5f2da258695c00632d327bb7]
+link Trainee to Train--><g id="link_Trainee_Train"><path d="M400.613,54.3018 C410.447,54.3018 420.28,54.3018 430.114,54.3018 " fill="none" id="Trainee-to-Train" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="435.256,54.3018,426.256,50.3018,430.256,54.3018,426.256,58.3018,435.256,54.3018" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[3e69e332d2fbff6105a3912cc9e9b147]
+link Trainee to Changes--><g id="link_Trainee_Changes"><path d="M363.845,100.8218 C361.67,133.9388 354.279,178.4558 332,210.8018 C313.561,237.5728 283.447,257.6445 256.738,271.391 " fill="none" id="Trainee-to-Changes" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="252.14,273.7133,261.9768,273.2261,256.603,271.459,258.37,266.0853,252.14,273.7133" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[1f8d47ccfe15793f60dc16efc093d662]
+@startuml
+Trainer << Trainer >>
+:Main User: as Trainee << Trainee >>
+(Create new one) << Templates >>
+(Specified trainings plan) as (Use) << Together >>
+(train with the new plan) as (Train) << Own >>
+(Make some changes) as (Changes) << Together >>
+
+Trainer ->  (Create new one)
+Trainer - -> (Use)
+Trainer - -> (Changes)
+
+Trainee - -> (Use)
+Trainee -> (Train)
+Trainee - - -> (Changes)
+@enduml
+
+PlantUML version 1.2022.6beta4(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
