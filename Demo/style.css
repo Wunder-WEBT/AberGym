@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  position: fixed;
 }
 
 .page {
@@ -59,8 +60,7 @@ ul {
 }
 .col-7{
   align-self: right;
-  padding: 0;
-  margin: 0;
+ 
   padding-left: 16px;
   padding-top: 0px;
 }
@@ -83,7 +83,7 @@ ul {
 }
 
 .scrollWrapper{
-  height: 690px;
+  height: 55%;
   overflow-y: scroll;
 }
 
@@ -186,4 +186,11 @@ button.active::after {
 
 button:focus{
   outline: none;
+}
+
+input{
+  width: 2cm;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid;
 }
