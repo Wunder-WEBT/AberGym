@@ -9,6 +9,9 @@ document.querySelectorAll(".exercise").forEach((exercise) => {
       const tmp = exercise.cloneNode(true);
       tmp.classList.remove("dragging");
       tmp.classList.remove("exercise");
+      tmp.querySelector("button").addEventListener("click", function(){
+        tmp.remove()
+      } );
       tmp.addEventListener("dragstart", () => {
         tmp.classList.add("dragging");
       });
@@ -93,6 +96,9 @@ for (ci = 0; ci < coll.length; ci++) {
   });
 }
 
-document.querySelectorAll(".deleteButton").forEach((button) => {
-    button.addEventListener("click", button.parentElement.remove());
-  });
+
+document.querySelectorAll(".deleteButton").forEach( button => {
+  button.addEventListener("click", function(){
+    button.parentElement.remove()
+  } );
+});
