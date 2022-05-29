@@ -20,7 +20,7 @@ ul {
   padding-right: 1.5mm;
   padding-top: 3mm;
 }
-#exerciseBox {
+.exerciseBox {
   grid-area: nav;
   background-color: #333;
   width: auto;
@@ -172,7 +172,6 @@ button.active::after {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  background-color: #f1f1f1;
 }
 
 .exerciseHolder{

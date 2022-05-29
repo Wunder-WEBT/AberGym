@@ -1,11 +1,11 @@
 let draggables = document.querySelectorAll(".draggable");
 const containers = document.querySelectorAll(".container");
-const eBox = document.getElementById("exerciseBox");
 let nextElemEBox = null;
+let parentEBox = null;
 
 document.querySelectorAll(".exercise").forEach((exercise) => {
   exercise.addEventListener("dragend", (e) => {
-    if (exercise.parentElement !== eBox) {
+    if (!exercise.parentElement.classList.contains("exerciseBox")) {
       const tmp = exercise.cloneNode(true);
       tmp.classList.remove("dragging");
       tmp.classList.remove("exercise");
@@ -18,15 +18,16 @@ document.querySelectorAll(".exercise").forEach((exercise) => {
 
       exercise.replaceWith(tmp);
       if (nextElemEBox === null) {
-        eBox.appendChild(exercise);
+        parentEBox.appendChild(exercise);
       } else {
-        eBox.insertBefore(exercise, nextElemEBox);
+        parentEBox.insertBefore(exercise, nextElemEBox);
       }
     }
   });
 
   exercise.addEventListener("dragstart", (e) => {
     nextElemEBox = exercise.nextElementSibling;
+    parentEBox = exercise.parentElement;
   });
 });
 
@@ -44,8 +45,8 @@ containers.forEach((container) => {
   container.addEventListener("dragover", (e) => {
     const draggable = document.querySelector(".dragging");
     if (
-      !(container.id === "exerciseBox") ||
-      draggable.classList.contains("exercise")
+      !(container.classList.contains("exerciseBox")) ||
+      draggable.classList.contains("exercise") && container.dataset.et === draggable.dataset.et 
     ) {
       e.preventDefault();
       const afterElement = getDragAfterElement(container, e.clientY);
