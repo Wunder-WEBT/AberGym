@@ -9,9 +9,9 @@ document.querySelectorAll(".exercise").forEach((exercise) => {
       const tmp = exercise.cloneNode(true);
       tmp.classList.remove("dragging");
       tmp.classList.remove("exercise");
-      tmp.querySelector("button").addEventListener("click", function(){
-        tmp.remove()
-      } );
+      tmp.querySelector("button").addEventListener("click", function () {
+        tmp.remove();
+      });
       tmp.addEventListener("dragstart", () => {
         tmp.classList.add("dragging");
       });
@@ -48,8 +48,9 @@ containers.forEach((container) => {
   container.addEventListener("dragover", (e) => {
     const draggable = document.querySelector(".dragging");
     if (
-      !(container.classList.contains("exerciseBox")) ||
-      draggable.classList.contains("exercise") && container.dataset.et === draggable.dataset.et 
+      !container.classList.contains("exerciseBox") ||
+      (draggable.classList.contains("exercise") &&
+        container.dataset.et === draggable.dataset.et)
     ) {
       e.preventDefault();
       const afterElement = getDragAfterElement(container, e.clientY);
@@ -85,20 +86,19 @@ let coll = document.getElementsByClassName("collapsible");
 let ci;
 
 for (ci = 0; ci < coll.length; ci++) {
-  coll[ci].addEventListener("click", function() {
+  coll[ci].addEventListener("click", function () {
     this.classList.toggle("active");
     var content = this.nextElementSibling;
-    if (content.style.maxHeight){
+    if (content.style.maxHeight) {
       content.style.maxHeight = null;
     } else {
       content.style.maxHeight = content.scrollHeight + "px";
-    } 
+    }
   });
 }
 
-
-document.querySelectorAll(".deleteButton").forEach( button => {
-  button.addEventListener("click", function(){
-    button.parentElement.remove()
-  } );
+document.querySelectorAll(".deleteButton").forEach((button) => {
+  button.addEventListener("click", function () {
+    button.parentElement.remove();
+  });
 });
