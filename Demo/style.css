@@ -44,9 +44,9 @@ ul {
 
 .exerciseBox {
   grid-area: nav;
-  background-color: #333;
+  background-color: rgb(46, 47, 45);
   width: auto;
-
+  padding-bottom: 2.5mm;
 }
 
 .draggable {
@@ -54,8 +54,9 @@ ul {
   background-color: white;
   border: 1px solid black;
   cursor: move;
-  border-radius: 10px;
-
+  border-radius: 7px;
+  padding-right: 0;
+  padding-top: 0;
   margin-top: 2.5mm;
   margin-bottom: 2.5mm;
 
@@ -265,7 +266,24 @@ body.legal.landscape .sheet {
   text-align: left;
   outline: none;
   font-size: 15px;
+  font-weight: bold;
+  margin-top: 2px;
+}
+
+.addButton{
+  background-color: rgb(100, 100, 100);
+  color: goldenrod;
+  cursor: pointer;
+  padding: 6px;
+  width: 100%;
   border: none;
+  text-align: center;
+  outline: none;
+  font-size: 16px;
+}
+
+.addButton:hover {
+  background-color: rgb(67, 67, 67);
 }
 
 .collapsible:hover {
@@ -285,7 +303,7 @@ button.active::after {
 }
 
 .content {
-  padding: 0 18px;
+  padding: 0 0px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
@@ -312,7 +330,12 @@ input {
   border-bottom: 2px solid;
 }
 
+h4{
+  display: inline-block;
+}
 
 .deleteButton {
-  display: inline;
+  float: right;
+  border-top-right-radius: 7px;
+  border: none;
 }

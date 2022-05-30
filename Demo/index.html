@@ -16,7 +16,7 @@
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="unselectable">
     <nav class="navbar navbar-dark navbar-expand">
       <a class="navbar-brand float-lg-left" href="#" style="font-size: 16pt">
         <img
@@ -49,17 +49,18 @@
         <div class="scrollWrapper ScrollLeft">
           <div class="exerciseHolder">
             <button class="collapsible">Brust</button>
-            <div class="container content exerciseBox" data-et="chest">
+            <div class="content">
+            <button class="addButton">Hinzufügen</button>
+            <div class="container exerciseBox" data-et="chest">
               <div class="draggable exercise" data-et="chest" draggable="true">
                 <h4>Flys - Mittlere Brust</h4>
-
-                <button type="deleteButton" class="deleteButton">
+                
+                <button type="deleteButton" class="deleteButton noPrint">
                   &#10006;
                 </button>
                 <h6></h6>
                 <p>
-                  Nullam id dolor id nibh ultricies vehicula ut id elit. Cras
-                  justo odio, dapibus ac.
+                  Nullam id dolor id nibh ultricies vehicula ut id elit.
                 </p>
                 <p>
                   Wdh: <input type="text" /> &emsp; Sätze:
@@ -68,7 +69,7 @@
               </div>
               <div class="draggable exercise" data-et="chest" draggable="true">
                 <h4>Dips - obere Brust</h4>
-                <button type="deleteButton" class="deleteButton">
+                <button type="deleteButton" class="deleteButton noPrint">
                   &#10006;
                 </button>
                 <h6></h6>
@@ -84,7 +85,7 @@
               </div>
               <div class="draggable exercise" data-et="chest" draggable="true">
                 <h4>Schulterheben - Brust 3</h4>
-                <button type="deleteButton" class="deleteButton">
+                <button type="deleteButton" class="deleteButton noPrint">
                   &#10006;
                 </button>
                 <h6></h6>
@@ -98,11 +99,14 @@
                 </p>
               </div>
             </div>
+            </div>
             <button class="collapsible">Beine</button>
-            <div class="container content exerciseBox" data-et="legs">
+            <div class="content">
+              <button class="addButton">Hinzufügen</button>
+            <div class="container exerciseBox" data-et="legs">
               <div class="draggable exercise" data-et="legs" draggable="true">
                 <h4>legs 1</h4>
-                <button type="deleteButton" class="deleteButton">
+                <button type="deleteButton" class="deleteButton noPrint">
                   &#10006;
                 </button>
                 <h6></h6>
@@ -117,7 +121,7 @@
               </div>
               <div class="draggable exercise" data-et="legs" draggable="true">
                 <h4>legs 2</h4>
-                <button type="deleteButton" class="deleteButton">
+                <button type="deleteButton" class="deleteButton noPrint">
                   &#10006;
                 </button>
                 <h6></h6>
@@ -133,7 +137,7 @@
               </div>
               <div class="draggable exercise" data-et="legs" draggable="true">
                 <h4>legs 3</h4>
-                <button type="deleteButton" class="deleteButton">
+                <button type="deleteButton" class="deleteButton noPrint">
                   &#10006;
                 </button>
                 <h6></h6>
@@ -146,6 +150,325 @@
                   <input type="text" /> &emsp; Gewicht: <input type="text" />
                 </p>
               </div>
+            </div>
+            </div>
+
+            <button class="collapsible">Schultern</button>
+            <div class="content">
+            <button class="addButton">Hinzufügen</button>
+            <div class="container exerciseBox" data-et="chest">
+              <div class="draggable exercise" data-et="chest" draggable="true">
+                <h4>Flys - Mittlere Brust</h4>
+                
+                <button type="deleteButton" class="deleteButton noPrint">
+                  &#10006;
+                </button>
+                <h6></h6>
+                <p>
+                  Nullam id dolor id nibh ultricies vehicula ut id elit.
+                </p>
+                <p>
+                  Wdh: <input type="text" /> &emsp; Sätze:
+                  <input type="text" /> &emsp; Gewicht: <input type="text" />
+                </p>
+              </div>
+              <div class="draggable exercise" data-et="chest" draggable="true">
+                <h4>Dips - obere Brust</h4>
+                <button type="deleteButton" class="deleteButton noPrint">
+                  &#10006;
+                </button>
+                <h6></h6>
+                <p>
+                  Nullam id dolor id nibh ultricies vehicula ut id elit. Cras
+                  justo odio, dapibus ac facilisis in, egestas eget quam. Donec
+                  id elit non mi porta gravida at eget metus.
+                </p>
+                <p>
+                  Wdh: <input type="text" /> &emsp; Sätze:
+                  <input type="text" /> &emsp; Gewicht: <input type="text" />
+                </p>
+              </div>
+              <div class="draggable exercise" data-et="chest" draggable="true">
+                <h4>Schulterheben - Brust 3</h4>
+                <button type="deleteButton" class="deleteButton noPrint">
+                  &#10006;
+                </button>
+                <h6></h6>
+                <p>
+                  Nullam id dolor id nibh ultricies vehicula ut id elit. Cras
+                  justo odio, dapibus ac facilisis in, egestas eget.
+                </p>
+                <p>
+                  Wdh: <input type="text" /> &emsp; Sätze:
+                  <input type="text" /> &emsp; Gewicht: <input type="text" />
+                </p>
+              </div>
+            </div>
+            </div>
+
+            <button class="collapsible">Bizeps</button>
+            <div class="content">
+            <button class="addButton">Hinzufügen</button>
+            <div class="container exerciseBox" data-et="chest">
+              <div class="draggable exercise" data-et="chest" draggable="true">
+                <h4>Flys - Mittlere Brust</h4>
+                
+                <button type="deleteButton" class="deleteButton noPrint">
+                  &#10006;
+                </button>
+                <h6></h6>
+                <p>
+                  Nullam id dolor id nibh ultricies vehicula ut id elit.
+                </p>
+                <p>
+                  Wdh: <input type="text" /> &emsp; Sätze:
+                  <input type="text" /> &emsp; Gewicht: <input type="text" />
+                </p>
+              </div>
+              <div class="draggable exercise" data-et="chest" draggable="true">
+                <h4>Dips - obere Brust</h4>
+                <button type="deleteButton" class="deleteButton noPrint">
+                  &#10006;
+                </button>
+                <h6></h6>
+                <p>
+                  Nullam id dolor id nibh ultricies vehicula ut id elit. Cras
+                  justo odio, dapibus ac facilisis in, egestas eget quam. Donec
+                  id elit non mi porta gravida at eget metus.
+                </p>
+                <p>
+                  Wdh: <input type="text" /> &emsp; Sätze:
+                  <input type="text" /> &emsp; Gewicht: <input type="text" />
+                </p>
+              </div>
+              <div class="draggable exercise" data-et="chest" draggable="true">
+                <h4>Schulterheben - Brust 3</h4>
+                <button type="deleteButton" class="deleteButton noPrint">
+                  &#10006;
+                </button>
+                <h6></h6>
+                <p>
+                  Nullam id dolor id nibh ultricies vehicula ut id elit. Cras
+                  justo odio, dapibus ac facilisis in, egestas eget.
+                </p>
+                <p>
+                  Wdh: <input type="text" /> &emsp; Sätze:
+                  <input type="text" /> &emsp; Gewicht: <input type="text" />
+                </p>
+              </div>
+            </div>
+            </div>
+
+            <button class="collapsible">Bauch</button>
+            <div class="content">
+            <button class="addButton">Hinzufügen</button>
+            <div class="container exerciseBox" data-et="chest">
+              <div class="draggable exercise" data-et="chest" draggable="true">
+                <h4>Flys - Mittlere Brust</h4>
+                
+                <button type="deleteButton" class="deleteButton noPrint">
+                  &#10006;
+                </button>
+                <h6></h6>
+                <p>
+                  Nullam id dolor id nibh ultricies vehicula ut id elit.
+                </p>
+                <p>
+                  Wdh: <input type="text" /> &emsp; Sätze:
+                  <input type="text" /> &emsp; Gewicht: <input type="text" />
+                </p>
+              </div>
+              <div class="draggable exercise" data-et="chest" draggable="true">
+                <h4>Dips - obere Brust</h4>
+                <button type="deleteButton" class="deleteButton noPrint">
+                  &#10006;
+                </button>
+                <h6></h6>
+                <p>
+                  Nullam id dolor id nibh ultricies vehicula ut id elit. Cras
+                  justo odio, dapibus ac facilisis in, egestas eget quam. Donec
+                  id elit non mi porta gravida at eget metus.
+                </p>
+                <p>
+                  Wdh: <input type="text" /> &emsp; Sätze:
+                  <input type="text" /> &emsp; Gewicht: <input type="text" />
+                </p>
+              </div>
+              <div class="draggable exercise" data-et="chest" draggable="true">
+                <h4>Schulterheben - Brust 3</h4>
+                <button type="deleteButton" class="deleteButton noPrint">
+                  &#10006;
+                </button>
+                <h6></h6>
+                <p>
+                  Nullam id dolor id nibh ultricies vehicula ut id elit. Cras
+                  justo odio, dapibus ac facilisis in, egestas eget.
+                </p>
+                <p>
+                  Wdh: <input type="text" /> &emsp; Sätze:
+                  <input type="text" /> &emsp; Gewicht: <input type="text" />
+                </p>
+              </div>
+            </div>
+            </div>
+
+            <button class="collapsible">Waden</button>
+            <div class="content">
+            <button class="addButton">Hinzufügen</button>
+            <div class="container exerciseBox" data-et="chest">
+              <div class="draggable exercise" data-et="chest" draggable="true">
+                <h4>Flys - Mittlere Brust</h4>
+                
+                <button type="deleteButton" class="deleteButton noPrint">
+                  &#10006;
+                </button>
+                <h6></h6>
+                <p>
+                  Nullam id dolor id nibh ultricies vehicula ut id elit.
+                </p>
+                <p>
+                  Wdh: <input type="text" /> &emsp; Sätze:
+                  <input type="text" /> &emsp; Gewicht: <input type="text" />
+                </p>
+              </div>
+              <div class="draggable exercise" data-et="chest" draggable="true">
+                <h4>Dips - obere Brust</h4>
+                <button type="deleteButton" class="deleteButton noPrint">
+                  &#10006;
+                </button>
+                <h6></h6>
+                <p>
+                  Nullam id dolor id nibh ultricies vehicula ut id elit. Cras
+                  justo odio, dapibus ac facilisis in, egestas eget quam. Donec
+                  id elit non mi porta gravida at eget metus.
+                </p>
+                <p>
+                  Wdh: <input type="text" /> &emsp; Sätze:
+                  <input type="text" /> &emsp; Gewicht: <input type="text" />
+                </p>
+              </div>
+              <div class="draggable exercise" data-et="chest" draggable="true">
+                <h4>Schulterheben - Brust 3</h4>
+                <button type="deleteButton" class="deleteButton noPrint">
+                  &#10006;
+                </button>
+                <h6></h6>
+                <p>
+                  Nullam id dolor id nibh ultricies vehicula ut id elit. Cras
+                  justo odio, dapibus ac facilisis in, egestas eget.
+                </p>
+                <p>
+                  Wdh: <input type="text" /> &emsp; Sätze:
+                  <input type="text" /> &emsp; Gewicht: <input type="text" />
+                </p>
+              </div>
+            </div>
+            </div>
+
+            <button class="collapsible">Rücken</button>
+            <div class="content">
+            <button class="addButton">Hinzufügen</button>
+            <div class="container exerciseBox" data-et="chest">
+              <div class="draggable exercise" data-et="chest" draggable="true">
+                <h4>Flys - Mittlere Brust</h4>
+                
+                <button type="deleteButton" class="deleteButton noPrint">
+                  &#10006;
+                </button>
+                <h6></h6>
+                <p>
+                  Nullam id dolor id nibh ultricies vehicula ut id elit.
+                </p>
+                <p>
+                  Wdh: <input type="text" /> &emsp; Sätze:
+                  <input type="text" /> &emsp; Gewicht: <input type="text" />
+                </p>
+              </div>
+              <div class="draggable exercise" data-et="chest" draggable="true">
+                <h4>Dips - obere Brust</h4>
+                <button type="deleteButton" class="deleteButton noPrint">
+                  &#10006;
+                </button>
+                <h6></h6>
+                <p>
+                  Nullam id dolor id nibh ultricies vehicula ut id elit. Cras
+                  justo odio, dapibus ac facilisis in, egestas eget quam. Donec
+                  id elit non mi porta gravida at eget metus.
+                </p>
+                <p>
+                  Wdh: <input type="text" /> &emsp; Sätze:
+                  <input type="text" /> &emsp; Gewicht: <input type="text" />
+                </p>
+              </div>
+              <div class="draggable exercise" data-et="chest" draggable="true">
+                <h4>Schulterheben - Brust 3</h4>
+                <button type="deleteButton" class="deleteButton noPrint">
+                  &#10006;
+                </button>
+                <h6></h6>
+                <p>
+                  Nullam id dolor id nibh ultricies vehicula ut id elit. Cras
+                  justo odio, dapibus ac facilisis in, egestas eget.
+                </p>
+                <p>
+                  Wdh: <input type="text" /> &emsp; Sätze:
+                  <input type="text" /> &emsp; Gewicht: <input type="text" />
+                </p>
+              </div>
+            </div>
+            </div>
+
+            <button class="collapsible">Trizeps</button>
+            <div class="content">
+            <button class="addButton">Hinzufügen</button>
+            <div class="container exerciseBox" data-et="chest">
+              <div class="draggable exercise" data-et="chest" draggable="true">
+                <h4>Flys - Mittlere Brust</h4>
+                
+                <button type="deleteButton" class="deleteButton noPrint">
+                  &#10006;
+                </button>
+                <h6></h6>
+                <p>
+                  Nullam id dolor id nibh ultricies vehicula ut id elit.
+                </p>
+                <p>
+                  Wdh: <input type="text" /> &emsp; Sätze:
+                  <input type="text" /> &emsp; Gewicht: <input type="text" />
+                </p>
+              </div>
+              <div class="draggable exercise" data-et="chest" draggable="true">
+                <h4>Dips - obere Brust</h4>
+                <button type="deleteButton" class="deleteButton noPrint">
+                  &#10006;
+                </button>
+                <h6></h6>
+                <p>
+                  Nullam id dolor id nibh ultricies vehicula ut id elit. Cras
+                  justo odio, dapibus ac facilisis in, egestas eget quam. Donec
+                  id elit non mi porta gravida at eget metus.
+                </p>
+                <p>
+                  Wdh: <input type="text" /> &emsp; Sätze:
+                  <input type="text" /> &emsp; Gewicht: <input type="text" />
+                </p>
+              </div>
+              <div class="draggable exercise" data-et="chest" draggable="true">
+                <h4>Schulterheben - Brust 3</h4>
+                <button type="deleteButton" class="deleteButton noPrint">
+                  &#10006;
+                </button>
+                <h6></h6>
+                <p>
+                  Nullam id dolor id nibh ultricies vehicula ut id elit. Cras
+                  justo odio, dapibus ac facilisis in, egestas eget.
+                </p>
+                <p>
+                  Wdh: <input type="text" /> &emsp; Sätze:
+                  <input type="text" /> &emsp; Gewicht: <input type="text" />
+                </p>
+              </div>
+            </div>
             </div>
           </div>
         </div>
