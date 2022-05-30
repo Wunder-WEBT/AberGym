@@ -119,7 +119,7 @@ person .. trainer
 trainer - -|{ template
 trainee - -|{ t_plan
 template }|- -|{ exercise
-t_plan }|- -|{ exercise_plan
+t_plan - -|{ exercise_plan
 exercise - -|{ exercise_plan
 exercise - -|{ e_group
 @enduml
@@ -144,7 +144,6 @@ entity "Trainee" as trainee {
   *customer_id : number <<generated>>
   - -
   name : text
-  trainingspaln : text
   birthdate : date
   phone_number : text
   email : text
