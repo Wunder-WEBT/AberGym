@@ -5,7 +5,7 @@ let draggables = document.querySelectorAll(".draggable");
 const containers = document.querySelectorAll(".container");
 let nextElemEBox = null;
 let parentEBox = null;
-let deleteB = null;
+let deleteN = null;
 
 document.querySelectorAll(".exercise").forEach((exercise) => {
   exercise.addEventListener("dragend", (e) => {
@@ -14,7 +14,8 @@ document.querySelectorAll(".exercise").forEach((exercise) => {
       tmp.classList.remove("dragging");
       tmp.classList.remove("exercise");
       tmp.querySelector("button").addEventListener("click", function () {
-        tmp.remove();
+        deleteN = tmp
+        on();
       });
       tmp.addEventListener("dragstart", () => {
         tmp.classList.add("dragging");
@@ -103,8 +104,8 @@ for (ci = 0; ci < coll.length; ci++) {
 
 document.querySelectorAll(".deleteButton").forEach((button) => {
   button.addEventListener("click", function () {
+    deleteN = button.parentElement
     on();
-    //button.parentElement.remove();
   });
 });
 
@@ -120,7 +121,8 @@ document.querySelectorAll(".addButton").forEach((button) => {
         tmp.classList.remove("dragging");
         tmp.classList.remove("exercise");
         tmp.querySelector("button").addEventListener("click", function () {
-          tmp.remove();
+          deleteN = tmp
+          on();
         });
         tmp.addEventListener("dragstart", () => {
           tmp.classList.add("dragging");
@@ -138,7 +140,8 @@ document.querySelectorAll(".addButton").forEach((button) => {
       }
     });
     newElem.querySelector("button").addEventListener("click", function () {
-      newElem.remove();
+      deleteN = newElem
+      on();
     });
     newElem.addEventListener("dragstart", (e) => {
       nextElemEBox = newElem.nextElementSibling;
@@ -163,4 +166,9 @@ function on() {
 
 function off() {
   document.getElementById("overlay").style.display = "none";
+}
+
+function deleteButton(){
+  deleteN.remove();
+  off();
 }

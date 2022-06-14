@@ -22,7 +22,9 @@ body {
   }
 }
 
-
+ .OLB{
+  border-radius: 2mm;
+ }
 .page {
   grid-area: main;
   background-color: #333;
@@ -96,8 +98,8 @@ ul {
 
 .paperContainer {
   padding-top: 0;
-  padding-left: 0px;
-  padding-right: 0px;
+  padding-left: 5px;
+  padding-right: 5px;
   height: 25cm;
 }
 
@@ -357,10 +359,17 @@ h4{
 }
 
 #text{
+  padding: 0.7cm;
+  height: 23%;
+  aspect-ratio: 2/1;
   position: absolute;
   top: 50%;
   left: 50%;
-  color: white;
+  color: black;
   transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
+  background-color: white;
+  font-size: 20px;
+  align-content: center;
+  border-radius: 2mm;
 }
