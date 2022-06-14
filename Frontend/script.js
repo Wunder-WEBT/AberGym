@@ -5,6 +5,7 @@ let draggables = document.querySelectorAll(".draggable");
 const containers = document.querySelectorAll(".container");
 let nextElemEBox = null;
 let parentEBox = null;
+let deleteB = null;
 
 document.querySelectorAll(".exercise").forEach((exercise) => {
   exercise.addEventListener("dragend", (e) => {
@@ -102,16 +103,17 @@ for (ci = 0; ci < coll.length; ci++) {
 
 document.querySelectorAll(".deleteButton").forEach((button) => {
   button.addEventListener("click", function () {
-    button.parentElement.remove();
+    on();
+    //button.parentElement.remove();
   });
 });
 
 document.querySelectorAll(".addButton").forEach((button) => {
   button.addEventListener("click", function () {
-    var newElemP  = document.createElement("a");
+    var newElemP = document.createElement("a");
     newElemP.innerHTML = protoDrag;
     var newElem = newElemP.firstChild;
-    newElem.dataset.et = button.nextElementSibling.dataset.et
+    newElem.dataset.et = button.nextElementSibling.dataset.et;
     newElem.addEventListener("dragend", (e) => {
       if (!newElem.parentElement.classList.contains("exerciseBox")) {
         const tmp = newElem.cloneNode(true);
@@ -126,7 +128,7 @@ document.querySelectorAll(".addButton").forEach((button) => {
         tmp.addEventListener("dragend", () => {
           tmp.classList.remove("dragging");
         });
-  
+
         newElem.replaceWith(tmp);
         if (nextElemEBox === null) {
           parentEBox.appendChild(newElem);
@@ -147,5 +149,18 @@ document.querySelectorAll(".addButton").forEach((button) => {
       newElem.classList.remove("dragging");
     });
     button.nextElementSibling.prepend(newElem);
+    this.parentElement.style.maxHeight = this.parentElement.scrollHeight + "px";
   });
 });
+
+document.querySelector("#text").addEventListener("click", function (){
+  event.stopPropagation();
+})
+
+function on() {
+  document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
+}
