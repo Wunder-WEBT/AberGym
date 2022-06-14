@@ -1,0 +1,20 @@
+Plantuml Use Case
+
+@startuml
+Trainer << Trainer >>
+:Main User: as Trainee << Trainee >>
+(Create new) << Templates >>
+(Specified trainings plan) as (Use) << Together >>
+(train with the new plan) as (Train) << Own >>
+(Make some changes) as (Changes) << Together >>
+
+Trainer ->  (Create new)
+Trainer --> (Use)
+Trainer --> (Changes)
+
+Trainee --> (Use)
+Trainee -> (Train)
+Trainee ---> (Changes)
+
+@enduml
+
