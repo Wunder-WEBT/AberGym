@@ -1,5 +1,5 @@
 let protoDrag =
-  '<div class="draggable exercise" data-et="legs" draggable="true"><h4><input type="text" /></h4><button type="deleteButton" class="deleteButton">&#10006;</button><h6></h6><p><input type="text" /></p><p>Wdh: <input type="text" /> &emsp; Sätze:<input type="text" /> &emsp; Gewicht: <input type="text" /></p></div>';
+  '<div class="draggable exercise" data-et="legs" draggable="true"><h4><input type="text" /></h4><button type="deleteButton" class="deleteButton noPrint">&#10006;</button><h6></h6><p><input type="text" /></p><p>Wdh: <input type="text" /> &emsp; Sätze:<input type="text" /> &emsp; Gewicht: <input type="text" /></p></div>';
 
 let draggables = document.querySelectorAll(".draggable");
 const containers = document.querySelectorAll(".container");
@@ -108,12 +108,13 @@ document.querySelectorAll(".deleteButton").forEach((button) => {
 
 document.querySelectorAll(".addButton").forEach((button) => {
   button.addEventListener("click", function () {
-    var newElem  = document.createElement("a");
-    newElem.innerHTML = protoDrag;
-    newElem.firstChild.dataset.et = button.nextElementSibling.dataset.et
-    newElem.firstChild.addEventListener("dragend", (e) => {
-      if (!exercise.parentElement.classList.contains("exerciseBox")) {
-        const tmp = exercise.cloneNode(true);
+    var newElemP  = document.createElement("a");
+    newElemP.innerHTML = protoDrag;
+    var newElem = newElemP.firstChild;
+    newElem.dataset.et = button.nextElementSibling.dataset.et
+    newElem.addEventListener("dragend", (e) => {
+      if (!newElem.parentElement.classList.contains("exerciseBox")) {
+        const tmp = newElem.cloneNode(true);
         tmp.classList.remove("dragging");
         tmp.classList.remove("exercise");
         tmp.querySelector("button").addEventListener("click", function () {
@@ -126,22 +127,25 @@ document.querySelectorAll(".addButton").forEach((button) => {
           tmp.classList.remove("dragging");
         });
   
-        exercise.replaceWith(tmp);
+        newElem.replaceWith(tmp);
         if (nextElemEBox === null) {
-          parentEBox.appendChild(exercise);
+          parentEBox.appendChild(newElem);
         } else {
-          parentEBox.insertBefore(exercise, nextElemEBox);
+          parentEBox.insertBefore(newElem, nextElemEBox);
         }
       }
     });
-    newElem.firstChild.addEventListener("dragstart", (e) => {
-      nextElemEBox = exercise.nextElementSibling;
-      parentEBox = exercise.parentElement;
-      draggable.classList.add("dragging");
+    newElem.querySelector("button").addEventListener("click", function () {
+      newElem.remove();
     });
-    newElem.firstChild.addEventListener("dragend", () => {
-      draggable.classList.remove("dragging");
+    newElem.addEventListener("dragstart", (e) => {
+      nextElemEBox = newElem.nextElementSibling;
+      parentEBox = newElem.parentElement;
+      newElem.classList.add("dragging");
     });
-    button.nextElementSibling.prepend(newElem.firstChild);
+    newElem.addEventListener("dragend", () => {
+      newElem.classList.remove("dragging");
+    });
+    button.nextElementSibling.prepend(newElem);
   });
 });
