@@ -1,0 +1,37 @@
+name: Frontend
+
+on: 
+  push:
+    paths: 'Frontend/**'
+  workflow_dispatch:
+
+jobs:
+  deploy-website:
+    runs-on: ubuntu-latest
+
+    steps:    
+    - uses: actions/checkout@v1
+    
+    - name: Install ssh key
+      uses: caberger/install-ssh-key@v1.0
+      with:
+        ssh-private-key:  ${{ secrets.SSH_PRIVATE_KEY }}
+        user: ${{ secrets.REMOTE_USER }}
+        server: ${{ secrets.REMOTE_HOST }}
+        alias: server
+    
+    - name: Remove and recreate existing target folder
+      run: |
+        ssh server "sudo rm -rf ${{ secrets.REMOTE_TARGET }}"
+        ssh server "sudo mkdir ${{ secrets.REMOTE_TARGET }}"
+        ssh server "sudo chmod 777 ${{ secrets.REMOTE_TARGET }}"
+      
+    
+    - name: Deploy to OraVM
+      uses: easingthemes/ssh-deploy@main
+      env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SOURCE: "Frontend/"
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          TARGET: ${{ secrets.REMOTE_TARGET }}
