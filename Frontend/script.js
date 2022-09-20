@@ -1,5 +1,5 @@
 let protoDrag =
-  '<div class="draggable exercise" data-et="legs" draggable="true"><h4><input type="text" /></h4><button type="deleteButton" class="deleteButton noPrint">&#10006;</button><h6></h6><p><input type="text" /></p><p>Wdh: <input type="text" /> &emsp; Sätze:<input type="text" /> &emsp; Gewicht: <input type="text" /></p></div>';
+  '<div class="draggable exercise" data-et="legs" draggable="true"><h4><input type="text" style="width:300px;border: none;"/></h4><button type="deleteButton" class="deleteButton noPrint">&#10006;</button><h6></h6><p><input type="text" style="border: none;"/></p><p>Wdh: <input type="text" /> &emsp; Sätze:<input type="text" /> &emsp; Gewicht: <input type="text" /></p></div>';
 
 let draggables = document.querySelectorAll(".draggable");
 const containers = document.querySelectorAll(".container");
