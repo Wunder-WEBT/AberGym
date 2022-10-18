@@ -14,7 +14,7 @@ document.querySelectorAll(".exercise").forEach((exercise) => {
       tmp.classList.remove("dragging");
       tmp.classList.remove("exercise");
       tmp.querySelector("button").addEventListener("click", function () {
-        deleteN = tmp
+        deleteN = tmp;
         on();
       });
       tmp.addEventListener("dragstart", () => {
@@ -104,7 +104,7 @@ for (ci = 0; ci < coll.length; ci++) {
 
 document.querySelectorAll(".deleteButton").forEach((button) => {
   button.addEventListener("click", function () {
-    deleteN = button.parentElement
+    deleteN = button.parentElement;
     on();
   });
 });
@@ -121,7 +121,7 @@ document.querySelectorAll(".addButton").forEach((button) => {
         tmp.classList.remove("dragging");
         tmp.classList.remove("exercise");
         tmp.querySelector("button").addEventListener("click", function () {
-          deleteN = tmp
+          deleteN = tmp;
           on();
         });
         tmp.addEventListener("dragstart", () => {
@@ -140,7 +140,7 @@ document.querySelectorAll(".addButton").forEach((button) => {
       }
     });
     newElem.querySelector("button").addEventListener("click", function () {
-      deleteN = newElem
+      deleteN = newElem;
       on();
     });
     newElem.addEventListener("dragstart", (e) => {
@@ -156,9 +156,9 @@ document.querySelectorAll(".addButton").forEach((button) => {
   });
 });
 
-document.querySelector("#text").addEventListener("click", function (){
+document.querySelector("#text").addEventListener("click", function () {
   event.stopPropagation();
-})
+});
 
 function on() {
   document.getElementById("overlay").style.display = "block";
@@ -168,7 +168,7 @@ function off() {
   document.getElementById("overlay").style.display = "none";
 }
 
-function deleteButton(){
+function deleteButton() {
   deleteN.remove();
   off();
 }
