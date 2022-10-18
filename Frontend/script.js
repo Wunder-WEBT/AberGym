@@ -93,7 +93,7 @@ let ci;
 for (ci = 0; ci < coll.length; ci++) {
   coll[ci].addEventListener("click", function () {
     this.classList.toggle("active");
-    var content = this.nextElementSibling;
+    let content = this.nextElementSibling;
     if (content.style.maxHeight) {
       content.style.maxHeight = null;
     } else {
@@ -111,9 +111,9 @@ document.querySelectorAll(".deleteButton").forEach((button) => {
 
 document.querySelectorAll(".addButton").forEach((button) => {
   button.addEventListener("click", function () {
-    var newElemP = document.createElement("a");
+    let newElemP = document.createElement("a");
     newElemP.innerHTML = protoDrag;
-    var newElem = newElemP.firstChild;
+    let newElem = newElemP.firstChild;
     newElem.dataset.et = button.nextElementSibling.dataset.et;
     newElem.addEventListener("dragend", (e) => {
       if (!newElem.parentElement.classList.contains("exerciseBox")) {
