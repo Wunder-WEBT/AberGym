@@ -13,31 +13,24 @@ entity "Person" as person {
   --
   name : text
   birth_date : date
-  high : number
-  weight : number
   gender : text
 }
 
 entity "Trainee" as trainee {
-  *customer_id : number <<generated>>
+  *trainee_id : number <<generated>>
   --
   name : text
-  trainingspaln : text
-  birthdate : date
   phone_number : text
   email : text
   start_date : date
 }
 
 entity "Trainer" as trainer {
-  *Trainer_id : number <<generated>>
+  *trainer_id : number <<generated>>
   --
   name : text
-  birthdate : date
   phone_number : text
   email : text
-  gender : text
-  templates : text
 }
 
 entity "Template" as template {
@@ -45,57 +38,41 @@ entity "Template" as template {
   --
   trainer_id : number
   name : text
-  aim : text
-  level : text
-  exercises : list(exercise)
 }
 
 entity "Exercise" as exercise {
   *exercise_id : number <<generated>>
   --
   name : text
-  aim : text
-  note : text
+  muscle_group : text
+}
+
+entity "Workoutplan" as w_plan {
+  *workoutplan_id : number <<generated>>
+  --
+  name : text
+  trainee_id : number
+}
+
+entity "Workoutplan_Exercise" as w_e {
+  *workoutplan_exercise_id : number <<generated>>
+  --
+  workoutplan_id : number
+  exercise_id : number
+  set : number
   weight : number
   reps : number
   time : number
-  excercise_type : string
-  description : text
 }
 
-entity "Split" as t_plan {
-  *plan_id : number <<generated>>
-  --
-  name : text
-  Trainee_id : number
-  exercises : list(exercise)
-}
 
-entity "Muscle_Group" as e_group{
-   *plan_id : number <<generated>>
-   --
-   name : text
-   body_part : text
-}
 
-entity "Studio" as studio{
-   *Studio_id : number <<generated>>
-   --
-   name : text
-   adresse : text
-   city : text
-   country : text
-   postalcode : number
-}
-studio }|--|{ trainee
-studio --|{ trainer
 person .. trainee
 person .. trainer
 trainer --|{ template
-trainee --|{ t_plan
-template --|{ exercise
-
-exercise --|{ e_group
-t_plan --|{ exercise
+trainee --|{ w_plan
+template }|--|{ exercise
+w_plan --|{ w_e
+exercise --|{ w_e
 
 @enduml
