@@ -1,5 +1,4 @@
 body {
-  margin: 0;
   position: fixed;
 }
 
@@ -23,7 +22,7 @@ body {
 }
 
  .OLB{
-  border-radius: 2mm;
+  border-radius: 8px;
  }
 .page {
   grid-area: main;
@@ -39,57 +38,54 @@ ul {
 }
 
 .container {
-  padding-left: 1.5mm;
-  padding-right: 1.5mm;
-  padding-top: 3mm;
+  padding-left: 6px;
+  padding-right: 6px;
+  padding-top: 11px;
 }
 
 .exerciseBox {
   grid-area: nav;
   background-color: rgb(46, 47, 45);
   width: auto;
-  padding-bottom: 2.5mm;
+  padding-bottom: 9px;
 }
 
 .draggable {
-  padding: 1mm;
+  padding: 4px;
   background-color: white;
-  border: 1px solid black;
+  border: 0.0625rem solid black;
   cursor: move;
-  border-radius: 7px;
+  border-radius: 0.4375rem;
   padding-right: 0;
   padding-top: 0;
-  margin-top: 2.5mm;
-  margin-bottom: 2.5mm;
+  margin-top: 9px;
+  margin-bottom: 9px;
 
 }
 
 .draggable.dragging {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 
 .row {
-  margin-left: 0px;
-  margin-right: 12px;
-  padding: 0px;
-  align-self: right;
+  margin-left: 0rem;
+  margin-right: 0.75rem;
+  padding: 0rem;
 }
 
 .col {
 
-  align-self: left;
   padding: 0;
   margin: 0;
-  padding-right: 10px;
-  margin-top: 0px;
+  padding-right: 0.625rem;
+  margin-top: 0rem;
 
 }
 
 .col-7 {
-  align-self: right;
-  padding-left: 16px;
-  padding-top: 0px;
+  padding-left: 1rem;
+  padding-top: 0rem;
 }
 
 .sheet {
@@ -98,9 +94,9 @@ ul {
 
 .paperContainer {
   padding-top: 0;
-  padding-left: 5px;
-  padding-right: 5px;
-  height: 25cm;
+  padding-left: 0.3125rem;
+  padding-right: 0.3125rem;
+  height: 945px;
 }
 
 .unselectable {
@@ -133,83 +129,27 @@ body {
 
 .sheet {
   margin: 0;
-  overflow: hidden;
+  overflow: visible;
   position: relative;
-  box-sizing: border-box;
+  box-sizing: content-box;
   page-break-after: always;
 }
 
 /** Paper sizes **/
-body.A3 .sheet {
-  width: 297mm;
-  height: 419mm
-}
 
-body.A3.landscape .sheet {
-  width: 420mm;
-  height: 296mm
-}
 
 .A4 .sheet {
-  width: 210mm;
-  height: 296mm
+  width: 794px;
+  height: 1119px;
 }
 
-body.A4.landscape .sheet {
-  width: 297mm;
-  height: 209mm
-}
-
-body.A5 .sheet {
-  width: 148mm;
-  height: 209mm
-}
-
-body.A5.landscape .sheet {
-  width: 210mm;
-  height: 147mm
-}
-
-body.letter .sheet {
-  width: 216mm;
-  height: 279mm
-}
-
-body.letter.landscape .sheet {
-  width: 280mm;
-  height: 215mm
-}
-
-body.legal .sheet {
-  width: 216mm;
-  height: 356mm
-}
-
-body.legal.landscape .sheet {
-  width: 357mm;
-  height: 215mm
-}
 
 /** Padding area **/
-.sheet.padding-5mm {
-  padding: 5mm
+
+.sheet.padding-38px {
+  padding: 38px
 }
 
-.sheet.padding-10mm {
-  padding: 10mm
-}
-
-.sheet.padding-15mm {
-  padding: 15mm
-}
-
-.sheet.padding-20mm {
-  padding: 20mm
-}
-
-.sheet.padding-25mm {
-  padding: 25mm
-}
 
 /** For screen preview **/
 @media screen {
@@ -219,8 +159,7 @@ body.legal.landscape .sheet {
 
   .sheet {
     background: white;
-    box-shadow: 0 .5mm 2mm rgba(0, 0, 0, .3);
-    margin: 5mm auto;
+    margin: 19px auto;
   }
 }
 
@@ -262,26 +201,26 @@ body.legal.landscape .sheet {
   background-color: #777;
   color: white;
   cursor: pointer;
-  padding: 18px;
+  padding: 1.125rem;
   width: 100%;
   border: none;
   text-align: left;
   outline: none;
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: bold;
-  margin-top: 2px;
+  margin-top: 0.125rem;
 }
 
 .addButton{
   background-color: rgb(100, 100, 100);
   color: goldenrod;
   cursor: pointer;
-  padding: 6px;
+  padding: 0.375rem;
   width: 100%;
   border: none;
   text-align: center;
   outline: none;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .addButton:hover {
@@ -297,7 +236,7 @@ body.legal.landscape .sheet {
   color: white;
   font-weight: bold;
   float: right;
-  margin-left: 5px;
+  margin-left: 0.3125rem;
 }
 
 button.active::after {
@@ -305,20 +244,20 @@ button.active::after {
 }
 
 .content {
-  padding: 0 0px;
+  padding:  0rem;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
 
 .exerciseHolder {
-  margin-top: 5mm;
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-bottom: 50px;
+  margin-top: 19px;
+  margin-left: 0.3125rem;
+  margin-right: 0.3125rem;
+  margin-bottom: 3.125rem;
   background-color: whitesmoke;
-  padding: 0.2cm;
-  box-shadow: 0px 0px 5px 0px rgba(18, 18, 18, 0.567)
+  padding: 8px;
+  box-shadow: 0rem 0rem 0.3125rem 0rem rgba(18, 18, 18, 0.567)
 }
 
 button:focus {
@@ -326,10 +265,10 @@ button:focus {
 }
 
 input {
-  width: 1.5cm;
+  width: 57px;
   border: none;
   outline: none;
-  border-bottom: 2px solid;
+  border-bottom: 0.125rem solid;
 }
 
 h4{
@@ -338,7 +277,7 @@ h4{
 
 .deleteButton {
   float: right;
-  border-top-right-radius: 7px;
+  border-top-right-radius: 0.4375rem;
   border: none;
 }
 
@@ -359,7 +298,7 @@ h4{
 }
 
 #text{
-  padding: 0.7cm;
+  padding: 26px;
   height: 23%;
   aspect-ratio: 2/1;
   position: absolute;
@@ -369,7 +308,12 @@ h4{
   transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   background-color: white;
-  font-size: 20px;
+  font-size: 1.25rem;
   align-content: center;
-  border-radius: 2mm;
+  border-radius: 8px;
+}
+
+.printButton{
+  margin-top: 5px;
+  border-radius: 8px;
 }
