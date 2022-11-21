@@ -10,7 +10,6 @@ import javax.persistence.*;
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name = "WorkoutExercise")
 public class WorkoutExercise {
     //Attributes
 
@@ -19,24 +18,24 @@ public class WorkoutExercise {
     private long id;
 
     @Column
-    public int set;
+    public Integer sets;
 
     @Column
-    public double weight;
+    public Double weight;
 
     @Column
-    public int reps;
+    public Integer reps;
 
     @Column
-    public double time;
+    public Double time;
 
     //Navigation
 
-    /*@ManyToOne
+    @ManyToOne
     @JoinColumn(name="workoutplan_id", nullable=false)
     public Workoutplan workoutplan;
 
     @ManyToOne
     @JoinColumn(name="exercise_id", nullable=false)
-    public Exercise exercise;*/
+    public Exercise exercise;
 }

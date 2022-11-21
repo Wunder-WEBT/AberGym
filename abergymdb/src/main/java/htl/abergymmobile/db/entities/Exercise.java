@@ -27,9 +27,9 @@ public class Exercise {
 
     //Navigation
 
-    @ManyToMany(fetch = FetchType.EAGER, mappedBy = "exercise")
-    public Set<Template> templateSet = new HashSet<>();
+    @OneToMany(mappedBy = "exercise", fetch = FetchType.EAGER)
+    public Set<WorkoutExercise> workoutExcersices = new HashSet<>();
 
-    /*@OneToMany(mappedBy = "exercise", fetch = FetchType.EAGER)
-    public Set<Workout_Excersice> workout_excersices = new HashSet<>();*/
+    /*@ManyToMany(fetch = FetchType.EAGER, mappedBy = "exercise")
+    public Set<Workoutplan> workoutplans = new HashSet<>();*/
 }

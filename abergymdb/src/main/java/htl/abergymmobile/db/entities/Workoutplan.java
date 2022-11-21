@@ -28,6 +28,13 @@ public class Workoutplan {
     @JoinColumn(name="trainee_id", nullable=false)
     public Trainee trainee;
 
-    /*@OneToMany(mappedBy = "workoutplan", fetch = FetchType.EAGER)
-    public Set<Workout_Excersice> workout_excersices = new HashSet<>();*/
+    @OneToMany(mappedBy = "workoutplan", fetch = FetchType.EAGER)
+    public Set<WorkoutExercise> workoutExcersices = new HashSet<>();
+
+    /*@ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(
+            name = "WorkoutExcersice", // name of the association table
+            joinColumns = @JoinColumn(name = "workoutplan_id"), // foreign key columns
+            inverseJoinColumns = @JoinColumn(name = "exercise_id"))
+    private Set<Exercise> exercise;*/
 }
