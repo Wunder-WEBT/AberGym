@@ -1,0 +1,1 @@
+docker run --name abergymmobile -p 3306:3306 -e MYSQL_ROOT_PASSWORD=abergymmobile_kp -d mysql:latest
