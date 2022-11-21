@@ -312,3 +312,8 @@ h4{
   align-content: center;
   border-radius: 8px;
 }
+
+.printButton{
+  margin-top: 5px;
+  border-radius: 8px;
+}

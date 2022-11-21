@@ -172,3 +172,7 @@ function deleteButton() {
   deleteN.remove();
   off();
 }
+
+function printButton() { 
+  window.print(); 
+}
