@@ -11,12 +11,21 @@ public class Exercise extends PanacheEntity{
     @Column(name = "muscle_group", nullable = false)
     public String muscleGroup;
 
+    @Column(name = "description")
+    public String description;
+
     public Exercise(){
     }
 
     public Exercise(String name, String muscleGroup){
         this.name = name;
         this.muscleGroup = muscleGroup;
+    }
+
+    public Exercise(String name, String muscleGroup, String description){
+        this.name = name;
+        this.muscleGroup = muscleGroup;
+        this.description = description;
     }
 
 }

@@ -1,13 +1,13 @@
 --  Exercise
 
-Insert into exercise (id, name, muscle_group) values (nextval('hibernate_sequence'),'Liegestütze', 'Bizeps');
+Insert into exercise (id, name, muscle_group, description) values (nextval('hibernate_sequence'),'Liegestütze', 'Bizeps', 'Lorem ipsum dolor sit amet, consetetur');
 Insert into exercise (id, name, muscle_group) values (nextval('hibernate_sequence'),'Bench Press', 'Brust');
 Insert into exercise (id, name, muscle_group) values (nextval('hibernate_sequence'),'Cable Flys', 'Brust');
 Insert into exercise (id, name, muscle_group) values (nextval('hibernate_sequence'),'Incline Dumbell press', 'Trizeps');
-Insert into exercise (id, name, muscle_group) values (nextval('hibernate_sequence'),'Biceps Curls', 'Bizeps');
+Insert into exercise (id, name, muscle_group, description) values (nextval('hibernate_sequence'),'Biceps Curls', 'Bizeps', 'Lorem ipsum dolor sit amet, consetetur');
 Insert into exercise (id, name, muscle_group) values (nextval('hibernate_sequence'),'Triceps Extension', 'Trizeps');
-Insert into exercise (id, name, muscle_group) values (nextval('hibernate_sequence'),'Triceps Curls', 'Trizeps');
-Insert into exercise (id, name, muscle_group) values (nextval('hibernate_sequence'),'Skullcrusher', 'Schultern');
+Insert into exercise (id, name, muscle_group, description) values (nextval('hibernate_sequence'),'Triceps Curls', 'Trizeps', 'Lorem ipsum dolor sit amet, consetetur');
+Insert into exercise (id, name, muscle_group, description) values (nextval('hibernate_sequence'),'Skullcrusher', 'Schultern', 'Lorem ipsum dolor sit amet, consetetur');
 
 
 --------------------------------------------------------
