@@ -1,0 +1,48 @@
+.tabs {
+    font-family: "lucida grande", sans-serif;
+  }
+  
+  [role="tablist"] {
+    min-width: 550px;
+  }
+  
+  [role="tab"],
+  [role="tab"]:focus,
+  [role="tab"]:hover {
+    position: relative;
+    z-index: 2;
+    top: 2px;
+    margin: 0;
+    margin-top: 4px;
+    padding: 3px 3px 4px;
+    border-radius: 5px 5px 0 0;
+    overflow: visible;
+    outline: none;
+    font-weight: bold;
+    color: rgb(206, 159, 7);
+    background-color: black;
+    font-size: 16pt;
+  }
+  
+ 
+  
+
+  
+  [role="tab"] span.focus {
+    display: inline-block;
+    margin: 2px;
+    padding: 4px 6px;
+  }
+  
+  
+  
+  
+  [role="tabpanel"].is-hidden {
+    display: none;
+  }
+  
+ iframe {
+  border: none;
+  width: 100vw;
+  height: 100vh; 
+ }
