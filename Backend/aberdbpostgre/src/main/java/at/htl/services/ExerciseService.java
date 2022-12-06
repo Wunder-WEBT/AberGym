@@ -57,11 +57,16 @@ public class ExerciseService {
         if (exercise.name == null) {
             throw new WebApplicationException("Exercise Name was not set on request.", 422);
         }
+        if (exercise.muscleGroup == null) {
+            throw new WebApplicationException("Exercise muscle was not set on request.", 422);
+        }
         Exercise entity = Exercise.findById(id);
         if (entity == null) {
             throw new WebApplicationException("Exercise with id of " + id + " does not exist.", 404);
         }
         entity.name = exercise.name;
+        entity.muscleGroup = exercise.muscleGroup;
+        entity.description = exercise.description;
         return entity;
     }
 
