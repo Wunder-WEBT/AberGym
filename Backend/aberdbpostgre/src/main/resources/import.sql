@@ -1,20 +1,38 @@
 --  Exercise
 
-Insert into exercise ( name, muscle_group, description) values ('Liegestütze', 'Bizeps', 'Lorem ipsum dolor sit amet, consetetur');
-Insert into exercise ( name, muscle_group) values ('Bench Press', 'Brust');
-Insert into exercise ( name, muscle_group) values ('Cable Flys', 'Brust');
-Insert into exercise ( name, muscle_group) values ('Incline Dumbell press', 'Trizeps');
-Insert into exercise ( name, muscle_group, description) values ('Biceps Curls', 'Bizeps', 'Lorem ipsum dolor sit amet, consetetur');
-Insert into exercise ( name, muscle_group) values ('Triceps Extension', 'Trizeps');
-Insert into exercise ( name, muscle_group, description) values ('Triceps Curls', 'Trizeps', 'Lorem ipsum dolor sit amet, consetetur');
-Insert into exercise ( name, muscle_group, description) values ('Skullcrusher', 'Schultern', 'Lorem ipsum dolor sit amet, consetetur');
+Insert into exercise ( name, muscle_group, description) values ('Skullcrusher', 'Trizeps', 'Lorem ipsum dolor sit amet, consetetur');
+Insert into exercise ( name, muscle_group, description) values ('Shulterdrücken', 'Schultern', 'Kurzhanteln');
+Insert into exercise ( name, muscle_group, description) values ('Shoulder Raises', 'Schultern', 'Lorem ipsum dolor sit amet, consetetur');
+Insert into exercise ( name, muscle_group, description) values ('Wadenheben', 'Waden', 'Lorem ipsum dolor sit amet, consetetur');
+Insert into exercise ( name, muscle_group, description) values ('Wadendrücken', 'Waden', 'An der Schiene');
+Insert into exercise ( name, muscle_group, description) values ('Beinpresse Eng', 'Beine', 'Beinpresse enger Stand');
+Insert into exercise ( name, muscle_group, description) values ('Beinstrecker', 'Beine', 'An der Maschine');
+Insert into exercise ( name, muscle_group, description) values ('Beinbeuger', 'Beine', 'An der Maschine');
+Insert into exercise ( name, muscle_group, description) values ('Bankdrücken', 'Brust', 'Lorem ipsum dolor sit amet, consetetur');
+Insert into exercise ( name, muscle_group, description) values ('Schiefes Bankdrücken', 'Brust', 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.');
+Insert into exercise ( name, muscle_group, description) values ('Flys von unter', 'Brust', 'Kabelzug mit Griffen');
+Insert into exercise ( name, muscle_group, description) values ('Legraises', 'Bauch', 'Hängend an der Klimzugstange');
+Insert into exercise ( name, muscle_group, description) values ('Eindrehen', 'Bauch', 'Am Kabelturm mit dem Strick');
+Insert into exercise ( name, muscle_group, description) values ('T-Bar row', 'Rücken', 'An der Maschine mit breiten Elbogen');
+Insert into exercise ( name, muscle_group, description) values ('Rudern Langhantel', 'Rücken', 'Lorem ipsum dolor sit amet, consetetur');
+Insert into exercise ( name, muscle_group, description) values ('Hammer Curls', 'Bizeps', 'Kurzhantel wie einen Hammer halten und anheben');
+Insert into exercise ( name, muscle_group, description) values ('Curls Kabelturm', 'Bizeps', 'Langer gerader Griff am Turm unten befestigen');
+Insert into exercise ( name, muscle_group, description) values ('Armstrecker Strick', 'Trizeps', 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.');
 
+Insert into exercise ( name, muscle_group, description) values ('Ueberkopfstrecken Strick', 'Trizeps', 'Lorem ipsum dolor sit amet, consetetur');
+Insert into exercise ( name, muscle_group, description) values ('Überzüge Strick', 'Rücken', 'Am Kabel oder Maschine langsame wiederholungen');
 
 --------------------------------------------------------
 --  First Customer | Test data
 --------------------------------------------------------
 Insert into Person (first_name,last_name,email) values ('Antonio','Peric','test@gmail.com');
 Insert into Trainee (id) values (1);
+Insert into Person (first_name,last_name,email) values ('Valentin','Duerk','du@gmail.com');
+Insert into Trainee (id) values (2);
+Insert into Person (first_name,last_name,email) values ('Mattias','Wunder','wunder@gmail.com');
+Insert into Trainee (id) values (3);
+Insert into Person (first_name,last_name,email) values ('Antonio','Kuvac','kumail@gmail.com');
+Insert into Trainee (id) values (4);
 
 --------------------------------------------------------
 --  First Workoutplan
