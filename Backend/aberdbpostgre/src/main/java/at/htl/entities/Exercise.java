@@ -1,10 +1,18 @@
 package at.htl.entities;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import io.quarkus.hibernate.orm.panache.PanacheEntity;
+import javax.json.bind.annotation.JsonbTransient;
+import javax.persistence.*;
+
+import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
+
+import java.util.HashSet;
+import java.util.Set;
+
 @Entity
-public class Exercise extends PanacheEntity{
+public class Exercise extends PanacheEntityBase{
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public Long id;
     @Column(length = 64, unique = true, nullable = false)
     public String name;
 
@@ -13,6 +21,10 @@ public class Exercise extends PanacheEntity{
 
     @Column(name = "description")
     public String description;
+
+    @JsonbTransient
+    @OneToMany(mappedBy = "exercise")
+    public Set<WorkoutExercise> workoutExcersices = new HashSet<>();
 
     public Exercise(){
     }
