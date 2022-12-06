@@ -1,7 +1,6 @@
 
 
-fetch('http://localhost:8080/hello', {
-    mode: 'no-cors',  
+fetch('http://localhost:8080/exercises', {
   headers: {
     }}
     ).then(response => response.json())
