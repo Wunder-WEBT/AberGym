@@ -1,3 +1,48 @@
+let start = `<div class="draggable exercise" data-et="`;
+
+//group
+
+let second = `" draggable="true">
+  <h4>`;
+
+//name
+
+let third = `</h4>
+  <button class="deleteButton noPrint">&#10006;</button>
+  <h6></h6>
+  <p>`;
+
+//descricption
+
+let end =
+  '</p> <p> Wdh: <input type="text" /> &emsp; Sätze:<input type="text" /> &emsp; Gewicht: <input type="text" /></p></div>';
+
+
+const exerciseRequest = new XMLHttpRequest();
+exerciseRequest.open('GET', 'http://localhost:8080/exercises', false);  // `false` makes the request synchronous
+exerciseRequest.send(null);
+let exerciseResponse = JSON.parse(exerciseRequest.responseText);
+
+console.log(exerciseResponse);  
+
+for (let i = 0; i < exerciseResponse.length; i++) {
+      if (document.getElementById(exerciseResponse[i]["muscleGroup"]) !== null) {
+        let exercise =
+          start + exerciseResponse[i].muscleGroup + second + exerciseResponse[i].name + third;
+
+        if (exerciseResponse[i].description !== undefined) {
+          exercise += exerciseResponse[i].description;
+        }
+        exercise += end;
+        let helper = document.createElement("a");
+        helper.innerHTML = exercise;
+        helper.firstChild.dataset.et = "chest";
+        document.getElementById(exerciseResponse[i]["muscleGroup"])
+          .appendChild(helper.firstChild);
+      }
+    }
+
+
 let protoDrag =
   '<div class="draggable exercise" data-et="legs" draggable="true"><h4><input type="text" style="width:300px;border: none;HEIGHT:32px;"/></h4><button type="deleteButton" class="deleteButton noPrint">&#10006;</button><h6></h6><p>Wdh: <input type="text" /> &emsp; Sätze:<input type="text" /> &emsp; Gewicht: <input type="text" /></p></div>';
 
@@ -173,6 +218,6 @@ function deleteButton() {
   off();
 }
 
-function printButton() { 
-  window.print(); 
+function printButton() {
+  window.print();
 }
