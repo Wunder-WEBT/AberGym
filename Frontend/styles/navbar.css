@@ -40,9 +40,3 @@
   [role="tabpanel"].is-hidden {
     display: none;
   }
-  
- iframe {
-  border: none;
-  width: 100vw;
-  height: 100vh; 
- }

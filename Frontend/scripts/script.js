@@ -1,3 +1,4 @@
+console.log('started');
 let start = `<div class="draggable exercise" data-et="`;
 
 //group
@@ -221,3 +222,4 @@ function deleteButton() {
 function printButton() {
   window.print();
 }
+console.log('finished script')
