@@ -1,7 +1,7 @@
 --  Exercise
 
 Insert into exercise ( name, muscle_group, description) values ('Skullcrusher', 'Trizeps', 'Lorem ipsum dolor sit amet, consetetur');
-Insert into exercise ( name, muscle_group, description) values ('Shulterdrücken', 'Schultern', 'Kurzhanteln');
+Insert into exercise ( name, muscle_group, description) values ('Schulterdrücken', 'Schultern', 'Kurzhanteln');
 Insert into exercise ( name, muscle_group, description) values ('Shoulder Raises', 'Schultern', 'Lorem ipsum dolor sit amet, consetetur');
 Insert into exercise ( name, muscle_group, description) values ('Wadenheben', 'Waden', 'Lorem ipsum dolor sit amet, consetetur');
 Insert into exercise ( name, muscle_group, description) values ('Wadendrücken', 'Waden', 'An der Schiene');
