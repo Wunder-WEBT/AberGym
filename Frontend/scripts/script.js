@@ -1,4 +1,4 @@
-console.log('started');
+
 let start = `<div class="draggable exercise" data-et="`;
 
 //group
@@ -27,7 +27,7 @@ let exerciseResponse = JSON.parse(exerciseRequest.responseText);
 console.log(exerciseResponse);  
 
 for (let i = 0; i < exerciseResponse.length; i++) {
-      if (document.getElementById(exerciseResponse[i]["muscleGroup"]) !== null) {
+      if (shadow1.getElementById(exerciseResponse[i]["muscleGroup"]) !== null) {
         let exercise =
           start + exerciseResponse[i].muscleGroup + second + exerciseResponse[i].name + third;
 
@@ -38,7 +38,7 @@ for (let i = 0; i < exerciseResponse.length; i++) {
         let helper = document.createElement("a");
         helper.innerHTML = exercise;
         helper.firstChild.dataset.et = "chest";
-        document.getElementById(exerciseResponse[i]["muscleGroup"])
+        shadow1.getElementById(exerciseResponse[i]["muscleGroup"])
           .appendChild(helper.firstChild);
       }
     }
@@ -47,13 +47,13 @@ for (let i = 0; i < exerciseResponse.length; i++) {
 let protoDrag =
   '<div class="draggable exercise" data-et="legs" draggable="true"><h4><input type="text" style="width:300px;border: none;HEIGHT:32px;"/></h4><button type="deleteButton" class="deleteButton noPrint">&#10006;</button><h6></h6><p>Wdh: <input type="text" /> &emsp; Sätze:<input type="text" /> &emsp; Gewicht: <input type="text" /></p></div>';
 
-let draggables = document.querySelectorAll(".draggable");
-const containers = document.querySelectorAll(".container");
+let draggables = shadow1.querySelectorAll(".draggable");
+const containers = shadow1.querySelectorAll(".container");
 let nextElemEBox = null;
 let parentEBox = null;
 let deleteN = null;
 
-document.querySelectorAll(".exercise").forEach((exercise) => {
+shadow1.querySelectorAll(".exercise").forEach((exercise) => {
   exercise.addEventListener("dragend", (e) => {
     if (!exercise.parentElement.classList.contains("exerciseBox")) {
       const tmp = exercise.cloneNode(true);
@@ -97,7 +97,7 @@ draggables.forEach((draggable) => {
 
 containers.forEach((container) => {
   container.addEventListener("dragover", (e) => {
-    const draggable = document.querySelector(".dragging");
+    const draggable = shadow1.querySelector(".dragging");
     if (
       !container.classList.contains("exerciseBox") ||
       (draggable.classList.contains("exercise") &&
@@ -133,7 +133,7 @@ function getDragAfterElement(container, y) {
   ).element;
 }
 
-let coll = document.getElementsByClassName("collapsible");
+let coll = shadow1.querySelectorAll(".collapsible");
 let ci;
 
 for (ci = 0; ci < coll.length; ci++) {
@@ -148,14 +148,14 @@ for (ci = 0; ci < coll.length; ci++) {
   });
 }
 
-document.querySelectorAll(".deleteButton").forEach((button) => {
+shadow1.querySelectorAll(".deleteButton").forEach((button) => {
   button.addEventListener("click", function () {
     deleteN = button.parentElement;
     on();
   });
 });
 
-document.querySelectorAll(".addButton").forEach((button) => {
+shadow1.querySelectorAll(".addButton").forEach((button) => {
   button.addEventListener("click", function () {
     let newElemP = document.createElement("a");
     newElemP.innerHTML = protoDrag;
@@ -201,17 +201,19 @@ document.querySelectorAll(".addButton").forEach((button) => {
     this.parentElement.style.maxHeight = this.parentElement.scrollHeight + "px";
   });
 });
-
-document.querySelector("#text").addEventListener("click", function () {
+console.log(shadow1);
+shadow1.querySelector("#text").addEventListener("click", function (event) {
   event.stopPropagation();
 });
 
+
+
 function on() {
-  document.getElementById("overlay").style.display = "block";
+  shadow1.getElementById("overlay").style.display = "block";
 }
 
 function off() {
-  document.getElementById("overlay").style.display = "none";
+  shadow1.getElementById("overlay").style.display = "none";
 }
 
 function deleteButton() {
@@ -222,4 +224,3 @@ function deleteButton() {
 function printButton() {
   window.print();
 }
-console.log('finished script')

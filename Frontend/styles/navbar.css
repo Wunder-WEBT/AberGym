@@ -40,3 +40,7 @@
   [role="tabpanel"].is-hidden {
     display: none;
   }
+
+  nav{
+    width: 100vw;
+  }
