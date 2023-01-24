@@ -34,4 +34,3 @@ fetch('html/user.html')
   .then(html => {
     shadow3.innerHTML = html;
   })
-  
