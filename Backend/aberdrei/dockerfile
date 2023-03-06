@@ -1,0 +1,4 @@
+FROM adoptopenjdk/openjdk11:alpine-jre
+EXPOSE 8080
+COPY target/aberdrei-1.0.0-SNAPSHOT.jar /opt/app/app.jar
+ENTRYPOINT ["java","-jar","/opt/app/app.jar"]
