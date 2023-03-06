@@ -1,4 +1,4 @@
-package at.htl.services;
+package htl.abergym.services;
 
 import java.util.List;
 import javax.enterprise.context.ApplicationScoped;
@@ -18,58 +18,58 @@ import javax.ws.rs.ext.Provider;
 
 import org.jboss.resteasy.annotations.jaxrs.PathParam;
 import io.quarkus.panache.common.Sort;
-import at.htl.entities.Trainer;
-@Path("trainers")
+import htl.abergym.entities.Trainee;
+@Path("trainees")
 @ApplicationScoped
 @Produces("application/json")
 @Consumes("application/json")
-public class TrainerService {
+public class TraineeService {
 
     @GET
-    public List<Trainer> get() {
-        return Trainer.listAll(Sort.by("id"));
+    public List<Trainee> get() {
+        return Trainee.listAll(Sort.by("id"));
     }
 
     @GET
     @Path("{id}")
-    public Trainer getSingle(@PathParam Long id) {
-        Trainer entity = Trainer.findById(id);
+    public Trainee getSingle(@PathParam Long id) {
+        Trainee entity = Trainee.findById(id);
         if (entity == null) {
-            throw new WebApplicationException("Trainer with id of " + id + " does not exist.", 404);
+            throw new WebApplicationException("Trainee with id of " + id + " does not exist.", 404);
         }
         return entity;
     }
 
     @POST
     @Transactional
-    public Response create(Trainer trainer) {
-        if (trainer.id != null) {
+    public Response create(Trainee trainee) {
+        if (trainee.id != null) {
             throw new WebApplicationException("Id was invalidly set on request.", 422);
         }
-        trainer.persist();
-        return Response.ok(trainer).status(201).build();
+        trainee.persist();
+        return Response.ok(trainee).status(201).build();
     }
 
     @PUT
     @Path("{id}")
     @Transactional
-    public Trainer update(@PathParam Long id, Trainer trainer) {
-        if (trainer.firstName == null) {
-            throw new WebApplicationException("Trainer Name was not set on request.", 422);
+    public Trainee update(@PathParam Long id, Trainee trainee) {
+        if (trainee.firstName == null) {
+            throw new WebApplicationException("Trainee first name was not set on request.", 422);
         }
-        if (trainer.lastName == null) {
-            throw new WebApplicationException("Trainer last name was not set on request.", 422);
+        if (trainee.lastName == null) {
+            throw new WebApplicationException("Trainee last name was not set on request.", 422);
         }
-        if (trainer.email == null) {
-            throw new WebApplicationException("Trainer email was not set on request.", 422);
+        if (trainee.email == null) {
+            throw new WebApplicationException("Trainee email was not set on request.", 422);
         }
-        Trainer entity = Trainer.findById(id);
+        Trainee entity = Trainee.findById(id);
         if (entity == null) {
-            throw new WebApplicationException("Trainer with id of " + id + " does not exist.", 404);
+            throw new WebApplicationException("Trainee with id of " + id + " does not exist.", 404);
         }
-        entity.firstName = trainer.firstName;
-        entity.lastName = trainer.lastName;
-        entity.email = trainer.email;
+        entity.firstName = trainee.firstName;
+        entity.lastName = trainee.lastName;
+        entity.email = trainee.email;
         return entity;
     }
 
@@ -77,9 +77,9 @@ public class TrainerService {
     @Path("{id}")
     @Transactional
     public Response delete(@PathParam Long id) {
-        Trainer entity = Trainer.findById(id);
+        Trainee entity = Trainee.findById(id);
         if (entity == null) {
-            throw new WebApplicationException("Trainer with id of " + id + " does not exist.", 404);
+            throw new WebApplicationException("Trainee with id of " + id + " does not exist.", 404);
         }
         entity.delete();
         return Response.status(204).build();

@@ -1,4 +1,4 @@
-package at.htl.services;
+package htl.abergym.services;
 
 import java.util.List;
 import javax.enterprise.context.ApplicationScoped;
@@ -18,7 +18,7 @@ import javax.ws.rs.ext.Provider;
 
 import org.jboss.resteasy.annotations.jaxrs.PathParam;
 import io.quarkus.panache.common.Sort;
-import at.htl.entities.Template;
+import htl.abergym.entities.Template;
 @Path("templates")
 @ApplicationScoped
 @Produces("application/json")

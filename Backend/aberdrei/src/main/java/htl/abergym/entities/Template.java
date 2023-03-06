@@ -1,4 +1,4 @@
-package at.htl.entities;
+package htl.abergym.entities;
 
 import javax.persistence.*;
 

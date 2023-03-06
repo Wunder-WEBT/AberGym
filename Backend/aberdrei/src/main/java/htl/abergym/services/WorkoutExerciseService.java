@@ -1,4 +1,4 @@
-package at.htl.services;
+package htl.abergym.services;
 
 import java.util.List;
 import javax.enterprise.context.ApplicationScoped;
@@ -16,57 +16,53 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.ExceptionMapper;
 import javax.ws.rs.ext.Provider;
 
+import htl.abergym.entities.WorkoutExercise;
 import org.jboss.resteasy.annotations.jaxrs.PathParam;
 import io.quarkus.panache.common.Sort;
-import at.htl.entities.Exercise;
-@Path("exercises")
+@Path("workoutexercises")
 @ApplicationScoped
 @Produces("application/json")
 @Consumes("application/json")
-public class ExerciseService {
+public class WorkoutExerciseService {
 
     @GET
-    public List<Exercise> get() {
-        return Exercise.listAll(Sort.by("id"));
+    public List<WorkoutExercise> get() {
+        return WorkoutExercise.listAll(Sort.by("id"));
     }
 
     @GET
     @Path("{id}")
-    public Exercise getSingle(@PathParam Long id) {
-        Exercise entity = Exercise.findById(id);
+    public WorkoutExercise getSingle(@PathParam Long id) {
+        WorkoutExercise entity = WorkoutExercise.findById(id);
         if (entity == null) {
-            throw new WebApplicationException("Exercise with id of " + id + " does not exist.", 404);
+            throw new WebApplicationException("WorkoutExercise with id of " + id + " does not exist.", 404);
         }
         return entity;
     }
 
     @POST
     @Transactional
-    public Response create(Exercise exercise) {
-        if (exercise.id != null) {
-            throw new WebApplicationException("Id was invalidly set on request.", 422);
+    public Response create(WorkoutExercise workoutexercise) {
+        if (workoutexercise.id != null) {
+            throw new WebApplicationException("id was invalidly set on request.", 422);
         }
-        exercise.persist();
-        return Response.ok(exercise).status(201).build();
+        workoutexercise.persist();
+        return Response.ok(workoutexercise).status(201).build();
     }
 
     @PUT
     @Path("{id}")
     @Transactional
-    public Exercise update(@PathParam Long id, Exercise exercise) {
-        if (exercise.name == null) {
-            throw new WebApplicationException("Exercise Name was not set on request.", 422);
-        }
-        if (exercise.muscleGroup == null) {
-            throw new WebApplicationException("Exercise muscle was not set on request.", 422);
-        }
-        Exercise entity = Exercise.findById(id);
+    public WorkoutExercise update(@PathParam Long id, WorkoutExercise workoutexercise) {
+        WorkoutExercise entity = WorkoutExercise.findById(id);
         if (entity == null) {
             throw new WebApplicationException("Exercise with id of " + id + " does not exist.", 404);
         }
-        entity.name = exercise.name;
-        entity.muscleGroup = exercise.muscleGroup;
-        entity.description = exercise.description;
+        entity.sets = workoutexercise.sets;
+        entity.weight = workoutexercise.weight;
+        entity.reps = workoutexercise.reps;
+        entity.time = workoutexercise.time;
+
         return entity;
     }
 
@@ -74,9 +70,9 @@ public class ExerciseService {
     @Path("{id}")
     @Transactional
     public Response delete(@PathParam Long id) {
-        Exercise entity = Exercise.findById(id);
+        WorkoutExercise entity = WorkoutExercise.findById(id);
         if (entity == null) {
-            throw new WebApplicationException("Exercise with id of " + id + " does not exist.", 404);
+            throw new WebApplicationException("Workoutexercise with id of " + id + " does not exist.", 404);
         }
         entity.delete();
         return Response.status(204).build();
