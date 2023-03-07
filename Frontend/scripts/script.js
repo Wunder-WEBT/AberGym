@@ -20,7 +20,7 @@ let end =
 
 
 const exerciseRequest = new XMLHttpRequest();
-exerciseRequest.open('GET', 'http://localhost:8080/exercises', false);  // `false` makes the request synchronous
+exerciseRequest.open('GET', 'https://student.cloud.htl-leonding.ac.at/student-a-kuvac/exercises', false);  // `false` makes the request synchronous
 exerciseRequest.send(null);
 let exerciseResponse = JSON.parse(exerciseRequest.responseText);
 
