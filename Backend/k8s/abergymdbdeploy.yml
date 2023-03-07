@@ -3,26 +3,26 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    app.quarkus.io/commit-id: 0e3afd419a0996cf0c80a05a983c498c3ca6902c
-    app.quarkus.io/build-timestamp: 2023-03-06 - 23:51:41 +0000
+    app.quarkus.io/commit-id: bf35e6bf5007a8eab9fd15af42907cc390de1a99
+    app.quarkus.io/build-timestamp: 2023-03-07 - 11:29:57 +0000
   labels:
-    app.kubernetes.io/name: aberdrei
     app.kubernetes.io/version: "1"
+    app.kubernetes.io/name: aberdrei
   name: aberdrei
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app.kubernetes.io/name: aberdrei
       app.kubernetes.io/version: "1"
+      app.kubernetes.io/name: aberdrei
   template:
     metadata:
       annotations:
-        app.quarkus.io/commit-id: 0e3afd419a0996cf0c80a05a983c498c3ca6902c
-        app.quarkus.io/build-timestamp: 2023-03-06 - 23:51:41 +0000
+        app.quarkus.io/commit-id: bf35e6bf5007a8eab9fd15af42907cc390de1a99
+        app.quarkus.io/build-timestamp: 2023-03-07 - 11:29:57 +0000
       labels:
-        app.kubernetes.io/name: aberdrei
         app.kubernetes.io/version: "1"
+        app.kubernetes.io/name: aberdrei
     spec:
       containers:
         - env:
@@ -42,8 +42,8 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    app.quarkus.io/commit-id: 0e3afd419a0996cf0c80a05a983c498c3ca6902c
-    app.quarkus.io/build-timestamp: 2023-03-06 - 23:51:41 +0000
+    app.quarkus.io/commit-id: bf35e6bf5007a8eab9fd15af42907cc390de1a99
+    app.quarkus.io/build-timestamp: 2023-03-07 - 11:29:57 +0000
   labels:
     app.kubernetes.io/name: aberdrei
     app.kubernetes.io/version: "1"
@@ -58,3 +58,24 @@ spec:
     app.kubernetes.io/name: aberdrei
     app.kubernetes.io/version: "1"
   type: ClusterIP
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: aberdrei
+  namespace: student-a-kuvac
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    #nginx.ingress.kubernetes.io/upstream-vhost: "aberdbpostgre"
+spec:
+  rules:
+    - host: student.cloud.htl-leonding.ac.at
+      http:
+        paths: 
+          - path: /student-a-kuvac(/|$)(.*)$
+            pathType: Prefix
+            backend:
+              service:
+                name: aberdrei
+                port:
+                  number: 80
