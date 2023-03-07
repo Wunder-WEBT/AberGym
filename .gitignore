@@ -29,3 +29,16 @@ Backend/aberdrei/.idea/compiler.xml
 Backend/aberdrei/.idea/jarRepositories.xml
 Backend/aberdrei/.idea/encodings.xml
 Backend/aberdrei/.idea/vcs.xml
+Backend/aberdrei/target/classes/META-INF/panache-archive.marker
+Backend/aberdrei/target/aberdrei-1.0.0-SNAPSHOT.jar.original
+Backend/aberdrei/.idea/jpa-buddy.xml
+Backend/aberdrei/target/classes/import.sql
+Backend/aberdrei/target/maven-archiver/pom.properties
+Backend/aberdrei/target/kubernetes/kubernetes.json
+Backend/aberdrei/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
+Backend/aberdrei/target/kubernetes/kubernetes.yml
+Backend/aberdrei/target/quarkus-artifact.properties
+Backend/aberdrei/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+Backend/aberdrei/target/classes/META-INF/resources/index.html
+Backend/aberdrei/target/classes/application.properties
+Backend/aberdrei/.idea/misc.xml
